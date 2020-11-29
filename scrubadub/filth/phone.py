@@ -21,7 +21,7 @@ class PhoneFilth(Filth):
         :rtype: str
         """
         phone_number = ''
-        language, region = utils.locale_split('en_GB')
+        language, region = utils.locale_split(faker._locales[0])
         results = []  # type: List[phonenumbers.PhoneNumberMatch]
         # Here I'm filtering for numbers that pass validation by the phonenumbers package
         while len(results) < 1:
